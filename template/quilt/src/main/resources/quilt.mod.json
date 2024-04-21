@@ -28,7 +28,7 @@
         "%%modgroup%%.quilt.%%modclass%%Quilt"
       ],
       "modmenu": [
-        "%%modgroup%%.fabriclike.ModMenuIntegration"
+        "%%modgroup%%.ModMenuIntegration"
       ]
     },
     "depends": [
@@ -45,8 +45,8 @@
         "version": $compatible_minecraft_versions
       },
       {
-        "id": "architectury",
-        "version": ">=${architectury_version}"
+        "id": "infrastructury",
+        "version": ">=${infrastructury_version}"
       },
       {
         "id": "cloth-config",

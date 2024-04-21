@@ -10,7 +10,7 @@ public class %%modclass%% {
     public static ConfigStructure CONFIG = AutoConfig.register(ConfigStructure.class, JanksonConfigSerializer::new).get();
 
     public static void init() {
-        // TODO
+        registerConfigScreen((mc, screen) -> createConfigScreen(screen).get());
     }
 
     public static Supplier<Screen> createConfigScreen(Screen screen) {

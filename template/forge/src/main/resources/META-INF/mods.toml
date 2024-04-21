@@ -20,9 +20,9 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.%%modid%%]]
-modId = "architectury"
+modId = "infrastructury"
 mandatory = true
-versionRange = "[${architectury_version},)"
+versionRange = "[${infrastructury_version},)"
 ordering = "NONE"
 side = "BOTH"
 

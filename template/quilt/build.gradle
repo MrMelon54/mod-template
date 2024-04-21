@@ -28,12 +28,6 @@ dependencies {
     modApi("org.quiltmc.quilted-fabric-api:quilted-fabric-api:${rootProject.quilt_fabric_api_version}") {
         exclude group: "net.fabricmc.fabric-api"
     }
-    // Remove the next few lines if you don't want to depend on the API
-    modApi("${rootProject.architectury_group}:architectury-fabric:${rootProject.architectury_version}") {
-        // We must not pull Fabric Loader from Architectury Fabric
-        exclude group: "net.fabricmc"
-        exclude group: "net.fabricmc.fabric-api"
-    }
 
     modApi("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
         exclude(group: "net.fabricmc")
@@ -43,11 +37,6 @@ dependencies {
         exclude(group: "net.fabricmc")
         exclude(group: "net.fabricmc.fabric-api")
     }
-
-    common(project(path: ":common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":common", configuration: "transformProductionQuilt")) { transitive false }
-    common(project(path: ":fabric-like", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":fabric-like", configuration: "transformProductionQuilt")) { transitive false }
 }
 
 processResources {
@@ -59,7 +48,7 @@ processResources {
                 "version": project.version,
                 "description": rootProject.mod_description,
                 "compatible_minecraft_versions": rootProject.compatible_minecraft_versions,
-                "architectury_version": rootProject.architectury_version,
+                "infrastructury_version": rootProject.infrastructury_version,
                 "cloth_config_version": rootProject.cloth_config_version
     }
 }
